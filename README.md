@@ -11,7 +11,7 @@ UV lamp** (idealized, weakly correlated, AR ρ ≈ 0.06), and **Real invisible f
 standard deviation and differ only in temporal autocorrelation.
 
 ```
-code_share/
+
 ├── main_experiments/    results reported in the manuscript (§2.3) and SI
 └── added_experiments/   supplementary ablations (capacity, parameter-matched
                          LSTM, window length, noise robustness)
@@ -69,7 +69,7 @@ To **verify the reported numbers without retraining**, run `evaluate.py` /
 
 ---
 
-## 2. supplementary ablations
+## 2. Supplementary ablations
 
 Four experiments, each following the same 5-seed protocol (per-seed
 re-preprocessing; training seed fixed; identical test set per window length).
@@ -80,7 +80,7 @@ re-preprocessing; training seed fixed; identical test set per window length).
 | `matched_compare.py` | Parameter-matched CNN vs LSTM (both at ~11k and ~31k) | CNN 98.13 / 99.33 % vs LSTM 75.88 / 75.43 % — accuracy tracks architecture, not capacity |
 | `window_ablation.py` | Window length 0.5 / 1 / 2 s | 99.78 / 99.10 / 98.64 % — 0.5 s already suffices |
 | `noise_robustness.py` | Additive test-time noise sweep (0–3.07 nA) | robust to σ ≈ 0.2 nA; flame recall collapses (flame→lamp) around σ ≈ 0.5–1 nA |
-
+noise_robustness.py — included for completeness; not reported in the manuscript or SI, pending measured device data.
 - `common_runner.py` — shared training/eval machinery; `models/` — the CNN/LSTM
   builders plus the scaled variants; `visualize_*.py` — the figures.
 - `exports_added/` — per-seed result JSONs and figures; `weights_added/` —
