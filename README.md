@@ -3,7 +3,7 @@
 Code, data, trained weights, and results for the 1D-CNN classifier section of
 *"Self-Powered Deep-UV Photodiodes for Intelligent Invisible Flame
 Detection"* (ZnGa2O4/Cu2O photodiode).
-
+This repository accompanies the manuscript by T. M. Vo, Y. Kim, and C. W. Bark. The DOI will be added upon publication.
 The classifier distinguishes three photocurrent sources from 1-second
 windows of simulated AR(1) time series: **Dark / No source**, **Artificial
 UV lamp** (idealized, weakly correlated, AR ρ ≈ 0.06), and **Real invisible flame**
@@ -74,13 +74,12 @@ To **verify the reported numbers without retraining**, run `evaluate.py` /
 Four experiments, each following the same 5-seed protocol (per-seed
 re-preprocessing; training seed fixed; identical test set per window length).
 
-| Script | Experiment | Headline result (mean ± std over 5 seeds) |
-|---|---|---|
-| `capacity_compare.py` | Tiny (771) / Proposed (10,755) / Deep (97,283) CNN | 97.75 ± 2.50 / 98.13 ± 2.53 / 99.78 ± 0.45 % — accuracy saturated across 126× params |
-| `matched_compare.py` | Parameter-matched CNN vs LSTM (both at ~11k and ~31k) | CNN 98.13 / 99.33 % vs LSTM 75.88 / 75.43 % — accuracy tracks architecture, not capacity |
-| `window_ablation.py` | Window length 0.5 / 1 / 2 s | 99.78 / 99.10 / 98.64 % — 0.5 s already suffices |
-| `noise_robustness.py` | Additive test-time noise sweep (0–3.07 nA) | robust to σ ≈ 0.2 nA; flame recall collapses (flame→lamp) around σ ≈ 0.5–1 nA |
-noise_robustness.py — included for completeness; not reported in the manuscript or SI, pending measured device data.
+| Script | Experiment | Headline result (mean ± std over 5 seeds) | Reported in |
+|---|---|---|---|
+| `capacity_compare.py` | Tiny (771) / Proposed (10,755) / Deep (97,283) CNN | 97.75 ± 2.50 / 98.13 ± 2.53 / 99.78 ± 0.45 % — accuracy saturated across 126× params | SI Fig. S20 |
+| `matched_compare.py` | Parameter-matched CNN vs LSTM (both at ~11k and ~31k) | CNN 98.13 / 99.33 % vs LSTM 75.88 / 75.43 % — accuracy tracks architecture, not capacity | SI Fig. S21 |
+| `window_ablation.py` | Window length 0.5 / 1 / 2 s | 99.78 / 99.10 / 98.64 % — 0.5 s already suffices | SI Fig. S22 |
+| `noise_robustness.py` | Additive test-time noise sweep (0–3.07 nA) | robust to σ ≈ 0.2 nA; flame recall collapses (flame→lamp) around σ ≈ 0.5–1 nA | **Not reported**, pending measured device data |
 - `common_runner.py` — shared training/eval machinery; `models/` — the CNN/LSTM
   builders plus the scaled variants; `visualize_*.py` — the figures.
 - `exports_added/` — per-seed result JSONs and figures; `weights_added/` —
