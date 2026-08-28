@@ -1,4 +1,4 @@
-# Photocurrent Signal Classification — Code & Data
+# Photocurrent Signal Classification
 
 Code, data, trained weights, and results for the 1D-CNN classifier section of
 *"Self-Powered Deep-UV Photodiodes for Intelligent Invisible Flame
