@@ -19,7 +19,7 @@ code_share/
 
 ---
 
-## 1. main_experiments — manuscript & SI results
+## 1. main_experiments
 
 ### Which script produces which reported number
 
@@ -69,7 +69,7 @@ To **verify the reported numbers without retraining**, run `evaluate.py` /
 
 ---
 
-## 2. added_experiments — supplementary ablations
+## 2. supplementary ablations
 
 Four experiments, each following the same 5-seed protocol (per-seed
 re-preprocessing; training seed fixed; identical test set per window length).
