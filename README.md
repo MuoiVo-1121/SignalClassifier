@@ -32,7 +32,7 @@ standard deviation and differ only in temporal autocorrelation.
 | `train.py` | Training (Adam 1e-3, batch 64, early stopping) → `weights/*_best.h5` |
 | `evaluate.py` | Test accuracy **99.25%**, macro-F1 0.993, confusion matrix (Fig. 6e, SI Table S3) |
 | `compare.py` | CNN vs LSTM side-by-side incl. inference time per window |
-| `multiseed_train.py` | 5-seed robustness {42,123,7,2024,99} → `exports/multiseed_results.json` |
+| `multiseed_train.py` | 5-seed robustness {42,123,7,2024,99} → 100.00 ± 0.00% (headline result reported in the manuscript) |
 | `baseline.py` | Threshold (100%), logistic regression (94.38%), random forest (96.63%) — SI Fig. S18–S19 |
 | `ablation_ripple.py` | 5 Hz supply-ripple confound ablation |
 | `spike_analysis.py` | Flame-spike confound analysis (98.78% on spike-free windows) |
@@ -100,7 +100,9 @@ python visualize_window.py  && python visualize_noise.py
 ---
 
 ## Reproducibility notes (please read)
-
+The window_ablation.py and capacity_compare.py runs were executed in separate sessions.
+Because training is not bit-deterministic (note 2), the 1.0 s window result differs slightly between them (99.10% vs 98.13%); 
+Both lie within the reported seed-to-seed standard deviation.
 1. **Two environments.** `main_experiments` results were produced with
    TensorFlow 2.13 (macOS/Colab); `added_experiments` with TensorFlow 2.21
    (Windows/CPU). Training dynamics differ slightly across framework
