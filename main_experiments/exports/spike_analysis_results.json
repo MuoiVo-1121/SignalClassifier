@@ -1,0 +1,15 @@
+{
+  "spike_windows": {
+    "n": 7,
+    "accuracy": 0.857143
+  },
+  "no_spike_windows": {
+    "n": 82,
+    "accuracy": 0.987805
+  },
+  "all_flame_windows": {
+    "n": 89,
+    "accuracy": 0.977528
+  },
+  "conclusion": "spikes_not_needed"
+}

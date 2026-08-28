@@ -1,0 +1,7 @@
+# Environment used for the manuscript/SI results
+# (original runs: TensorFlow 2.13, macOS / Google Colab)
+tensorflow==2.13.*        # on Apple silicon: tensorflow-macos==2.13.*
+scikit-learn
+numpy
+pandas
+matplotlib

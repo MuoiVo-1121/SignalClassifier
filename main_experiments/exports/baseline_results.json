@@ -1,0 +1,14 @@
+{
+  "Threshold": {
+    "train_acc": 0.833333,
+    "test_acc": 1.0
+  },
+  "LogReg": {
+    "train_acc": 0.924532,
+    "test_acc": 0.94382
+  },
+  "RandomForest": {
+    "train_acc": 1.0,
+    "test_acc": 0.966292
+  }
+}

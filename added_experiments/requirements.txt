@@ -1,0 +1,7 @@
+# Environment used for the added experiments (Windows / CPU)
+# Exact package versions: see requirements-lock.txt
+tensorflow==2.21.*
+scikit-learn
+numpy
+pandas
+matplotlib

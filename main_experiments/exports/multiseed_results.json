@@ -1,0 +1,28 @@
+{
+  "cnn": {
+    "mean": 1.0,
+    "std": 0.0,
+    "min": 1.0,
+    "max": 1.0,
+    "per_seed": [
+      {"seed": 42,   "test_accuracy": 1.0, "best_val_acc": 1.0, "stopped_epoch": 32},
+      {"seed": 123,  "test_accuracy": 1.0, "best_val_acc": 1.0, "stopped_epoch": 45},
+      {"seed": 7,    "test_accuracy": 1.0, "best_val_acc": 1.0, "stopped_epoch": 31},
+      {"seed": 2024, "test_accuracy": 1.0, "best_val_acc": 1.0, "stopped_epoch": 32},
+      {"seed": 99,   "test_accuracy": 1.0, "best_val_acc": 1.0, "stopped_epoch": 33}
+    ]
+  },
+  "lstm": {
+    "mean": 0.797,
+    "std": 0.1235,
+    "min": 0.6667,
+    "max": 0.9813,
+    "per_seed": [
+      {"seed": 42,   "test_accuracy": 0.6667, "best_val_acc": 0.6667, "stopped_epoch": 21},
+      {"seed": 123,  "test_accuracy": 0.9813, "best_val_acc": 0.9813, "stopped_epoch": 80},
+      {"seed": 7,    "test_accuracy": 0.9064, "best_val_acc": 0.8727, "stopped_epoch": 42},
+      {"seed": 2024, "test_accuracy": 0.7116, "best_val_acc": 0.7191, "stopped_epoch": 22},
+      {"seed": 99,   "test_accuracy": 0.7191, "best_val_acc": 0.7341, "stopped_epoch": 23}
+    ]
+  }
+}
