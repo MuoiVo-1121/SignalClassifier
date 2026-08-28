@@ -11,7 +11,6 @@ UV lamp** (idealized, weakly correlated, AR ρ ≈ 0.06), and **Real invisible f
 standard deviation and differ only in temporal autocorrelation.
 
 ```
-
 ├── main_experiments/    results reported in the manuscript (§2.3) and SI
 └── added_experiments/   supplementary ablations (capacity, parameter-matched
                          LSTM, window length, noise robustness)
